@@ -37,21 +37,19 @@
     "vite": "^4.4.5",
     "vite-tsconfig-paths": "^4.2.1"
   },
-  "name": "zooc-shopping",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  },
+  "name": "konkuk-uxdesign-aitutor",
   "private": true,
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "preview": "vite preview"
   },
   "type": "module",
-  "version": "0.0.0",
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  }
+  "version": "0.0.0"
 }
