@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 import BaseLayout from "../Common/BaseLayout";
 
-const AtTutor = () => {
+const AiTutor = () => {
   return (
     <BaseLayout
       headerName="AI Tutor"
@@ -22,7 +22,7 @@ const AtTutor = () => {
   );
 };
 
-export default AtTutor;
+export default AiTutor;
 
 const StAiTutor = styled.div`
   & > iframe {

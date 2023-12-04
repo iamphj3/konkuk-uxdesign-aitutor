@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 import { IcContact, IcQuestion, IcSuggestion } from "../../assets/icons";
@@ -6,6 +7,7 @@ import BaseLayout from "../Common/BaseLayout";
 import Menu from "../Common/Menu";
 
 const Main = () => {
+  const navigate = useNavigate();
   return (
     <BaseLayout
       headerName={"UX Design AI Tutor"}
@@ -27,7 +29,9 @@ const Main = () => {
             description={"김지인 교수님 전화번호, 이메일, 연구실 위치"}
             bgColor="#CAC2FF"
             textColor="#5236FF"
-            handleEnter={() => {}}
+            handleEnter={() => {
+              navigate("/contact");
+            }}
           />
           <Menu
             menuIcon={<IcQuestion />}
@@ -38,7 +42,9 @@ const Main = () => {
             }
             bgColor="#FFDBE6"
             textColor="#FF6493"
-            handleEnter={() => {}}
+            handleEnter={() => {
+              navigate("/question");
+            }}
           />
           <Menu
             menuIcon={<IcSuggestion />}
@@ -49,7 +55,9 @@ const Main = () => {
             }
             bgColor="#B7EEFF"
             textColor="#33BFEB"
-            handleEnter={() => {}}
+            handleEnter={() => {
+              navigate("/suggestion");
+            }}
           />
         </StMenuWrapper>
       </StMain>

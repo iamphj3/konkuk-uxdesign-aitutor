@@ -1,7 +1,7 @@
-import AtTutor from "../components/AiTutor/AtTutor";
+import AiTutor from "../components/AiTutor/AiTutor";
 
 const AiTutorPage = () => {
-  return <AtTutor />;
+  return <AiTutor />;
 };
 
 export default AiTutorPage;
