@@ -1,22 +1,27 @@
 import { styled } from "styled-components";
 
 import { BgAiTutor } from "../../assets/icons";
+import EnterButton from "../Common/EnterButton";
 
-const AiTutor = () => {
+const AiTutorMenu = () => {
   return (
     <StAiTutor>
       <StContent>
         <h2>UX Design AI 튜터</h2>
         <strong>UX Design AI Tutor</strong>
         <p>UX디자인과 관련된 내용을 AI 튜터에게 물어보세요.</p>
-        <StEnter type="button">바로가기</StEnter>
+        <EnterButton
+          bgColor="#fff"
+          textColor="#5236FF"
+          handleEnter={() => {}}
+        ></EnterButton>
       </StContent>
-      <BgAiTutor />
+      <StBgAiTutor />
     </StAiTutor>
   );
 };
 
-export default AiTutor;
+export default AiTutorMenu;
 
 const StAiTutor = styled.div`
   position: relative;
@@ -61,20 +66,9 @@ const StContent = styled.div`
   }
 `;
 
-const StEnter = styled.button`
-  display: flex;
-  padding: 2rem 4.5rem;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  border-radius: 3.9rem;
-  background: #fff;
-
-  color: #5236ff;
-  font-family: Nunito;
-  font-size: 2.4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+const StBgAiTutor = styled(BgAiTutor)`
+  width: 100%;
+  height: auto;
+  max-width: 140rem;
+  max-height: 58.5rem;
 `;

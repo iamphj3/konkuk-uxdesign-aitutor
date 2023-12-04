@@ -22,8 +22,11 @@ const StBaseLayout = styled.main`
   height: 100dvh;
 
   padding: 5.6rem 26rem 0 26rem;
-
-  background: linear-gradient(180deg, #e0dbff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    #e0dbff 0%,
+    rgba(255, 255, 255, 0) 41.31%
+  );
 `;
 
 const StMain = styled.div`

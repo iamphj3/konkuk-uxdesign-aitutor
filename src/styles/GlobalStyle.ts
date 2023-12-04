@@ -87,7 +87,7 @@ export const reset = css`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
     vertical-align: baseline;
   }
 
@@ -163,6 +163,8 @@ ${reset}
 
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */
+
+  font-size: calc(10 * calc(100vw / 1920)); 
 }
 #root::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라, 엣지 */
