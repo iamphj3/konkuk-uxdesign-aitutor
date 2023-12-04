@@ -26,6 +26,6 @@ const StBaseLayout = styled.main`
   background: linear-gradient(180deg, #e0dbff 0%, rgba(255, 255, 255, 0) 100%);
 `;
 
-const StMain = styled.section`
+const StMain = styled.div`
   width: 100%;
 `;
