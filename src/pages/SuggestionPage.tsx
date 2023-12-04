@@ -1,7 +1,7 @@
-import AtTutor from "../components/AiTutor/AiTutor";
+import Suggestion from "../components/Suggestion/Suggestion";
 
 const SuggestionPage = () => {
-  return <AtTutor />;
+  return <Suggestion />;
 };
 
 export default SuggestionPage;
