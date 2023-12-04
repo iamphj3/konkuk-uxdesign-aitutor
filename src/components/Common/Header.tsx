@@ -5,10 +5,12 @@ import { IcLogo } from "../../assets/icons";
 
 interface HeaderProps {
   headerName: string;
+  headerDescription?: React.ReactElement;
 }
 
-const Header = ({ headerName }: HeaderProps) => {
+const Header = ({ headerName, headerDescription }: HeaderProps) => {
   const navigate = useNavigate();
+
   return (
     <StHeaderWrapper>
       <StLogo
@@ -20,11 +22,7 @@ const Header = ({ headerName }: HeaderProps) => {
         <IcLogo />
       </StLogo>
       <h1>{headerName}</h1>
-      <p>
-        건국대학교 UX디자인 수업 AI 튜터 (김지인 교수) AI Tutor for UX Design
-        <br />
-        Class at Konkuk University (Professor Jee-in Kim)
-      </p>
+      {headerDescription}
     </StHeaderWrapper>
   );
 };
@@ -35,7 +33,7 @@ const StHeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 9.8rem;
+  margin-bottom: 7rem;
 
   & > h1 {
     margin-bottom: 3rem;

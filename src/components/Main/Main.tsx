@@ -7,7 +7,16 @@ import Menu from "../Common/Menu";
 
 const Main = () => {
   return (
-    <BaseLayout headerName={"UX Design AI Tutor"}>
+    <BaseLayout
+      headerName={"UX Design AI Tutor"}
+      headerDescription={
+        <p>
+          건국대학교 UX디자인 수업 AI 튜터 (김지인 교수) AI Tutor for UX Design
+          <br />
+          Class at Konkuk University (Professor Jee-in Kim)
+        </p>
+      }
+    >
       <StMain>
         <AiTutorMenu />
         <StMenuWrapper>

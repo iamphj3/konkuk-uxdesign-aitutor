@@ -1,19 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 import { BgAiTutor } from "../../assets/icons";
 import EnterButton from "../Common/EnterButton";
 
 const AiTutorMenu = () => {
+  const navigate = useNavigate();
   return (
     <StAiTutor>
       <StContent>
         <h2>UX Design AI 튜터</h2>
         <strong>UX Design AI Tutor</strong>
-        <p>UX디자인과 관련된 내용을 AI 튜터에게 물어보세요.</p>
+        <p>UX디자인 개념에 대해 궁금한 점이 있으면 AI 튜터에게 물어보세요.</p>
         <EnterButton
           bgColor="#fff"
           textColor="#5236FF"
-          handleEnter={() => {}}
+          handleEnter={() => {
+            navigate("/aitutor");
+          }}
         ></EnterButton>
       </StContent>
       <StBgAiTutor />

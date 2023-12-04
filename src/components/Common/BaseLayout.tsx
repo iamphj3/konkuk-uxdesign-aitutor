@@ -4,13 +4,18 @@ import Header from "./Header";
 
 interface BaseLayoutProps {
   headerName: string;
+  headerDescription?: React.ReactElement;
   children: React.ReactNode;
 }
 
-function BaseLayout({ headerName, children }: BaseLayoutProps) {
+function BaseLayout({
+  headerName,
+  headerDescription,
+  children,
+}: BaseLayoutProps) {
   return (
     <StBaseLayout>
-      <Header headerName={headerName} />
+      <Header headerName={headerName} headerDescription={headerDescription} />
       <StMain>{children}</StMain>
     </StBaseLayout>
   );
