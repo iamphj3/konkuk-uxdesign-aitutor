@@ -3,11 +3,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -20,16 +16,10 @@
     /* Linting */
     "strict": true,
     "target": "ES2020",
-    "types": [
-      "vite-plugin-svgr/client"
-    ],
+    "types": ["vite-plugin-svgr/client"],
     "useDefineForClassFields": true
   },
-  "include": [
-    "src",
-    "Router.ts",
-    "src/types"
-  ],
+  "include": ["src", "Router.ts", "src/types"],
   "references": [
     {
       "path": "./tsconfig.node.json"

@@ -1,17 +1,20 @@
 import { styled } from "styled-components";
 
-import Header from "../Common/Header";
+import BaseLayout from "../Common/BaseLayout";
 
 const Main = () => {
   console.log("d");
   return (
-    <StMain>
-      <Header />
-      메인 페이지
-    </StMain>
+    <BaseLayout headerName={"UX Design AI Tutor"}>
+      <StMain>dd</StMain>
+    </BaseLayout>
   );
 };
 
 export default Main;
 
-const StMain = styled.main``;
+const StMain = styled.div`
+  /* margin-top: 6.4rem; */
+
+  background: transparent;
+`;

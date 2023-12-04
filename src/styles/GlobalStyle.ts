@@ -161,8 +161,7 @@ ${reset}
   margin: 0 auto;
   overflow-y: auto;
 
-  background-color: ${({ theme }) => theme.colors.bg_green};
-  font-family: Pretendard;
+  background-color: #fff;
 
   -ms-overflow-style: none; /* 인터넷 익스플로러 */
   scrollbar-width: none; /* 파이어폭스 */

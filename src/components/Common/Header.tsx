@@ -1,11 +1,30 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
-import { IcLeft } from "../../assets/icons";
+import { IcLogo } from "../../assets/icons";
 
-const Header = () => {
+interface HeaderProps {
+  headerName: string;
+}
+
+const Header = ({ headerName }: HeaderProps) => {
+  const navigate = useNavigate();
   return (
     <StHeaderWrapper>
-      <h1>건국대학교 김지인 교수님 UX디자인 강의실</h1>
+      <StLogo
+        type="button"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        <IcLogo />
+      </StLogo>
+      <h1>{headerName}</h1>
+      <p>
+        건국대학교 UX디자인 수업 AI 튜터 (김지인 교수) AI Tutor for UX Design
+        <br />
+        Class at Konkuk University (Professor Jee-in Kim)
+      </p>
     </StHeaderWrapper>
   );
 };
@@ -13,21 +32,36 @@ const Header = () => {
 export default Header;
 
 const StHeaderWrapper = styled.header`
-  position: fixed;
-  top: 0;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
-  width: 100%;
-  padding: 2rem 3rem;
-  box-sizing: border-box;
-
-  background-color: ${({ theme }) => theme.colors.green};
+  margin-bottom: 9.8rem;
 
   & > h1 {
-    color: ${({ theme }) => theme.colors.dark_grey_2};
-    ${({ theme }) => theme.fonts.Headline};
+    margin-bottom: 3rem;
+
+    color: #242331;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 6.4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 110%; /* 7.04rem */
+  }
+
+  & > p {
+    color: #797979;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 157.4%; /* 3.4628rem */
+  }
+`;
+
+const StLogo = styled.button`
+  & > svg {
+    float: left;
   }
 `;
