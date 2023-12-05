@@ -15,7 +15,10 @@ const Question = () => {
       }
     >
       <StQuestion>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_zh0MrHhu3DE69MrOaxg71Zl0irm0dlpTh9w0Z-Z-c0lbdQ/viewform?embedded=true">
+        <iframe
+          font-size="50%"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd_zh0MrHhu3DE69MrOaxg71Zl0irm0dlpTh9w0Z-Z-c0lbdQ/viewform?embedded=true"
+        >
           로드 중…
         </iframe>
       </StQuestion>
@@ -28,6 +31,10 @@ export default Question;
 const StQuestion = styled.div`
   & > iframe {
     width: 100%;
-    height: 180rem;
+    height: 200rem;
+
+    @media (max-width: 768px) {
+      height: 950rem;
+    }
   }
 `;

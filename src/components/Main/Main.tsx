@@ -23,7 +23,7 @@ const Main = () => {
         <AiTutorMenu />
         <StMenuWrapper>
           <Menu
-            menuIcon={<IcContact />}
+            menuIcon={<StIcContact />}
             title={"교수님 연락처"}
             titleEng={"Contact"}
             description={"김지인 교수님 전화번호, 이메일, 연구실 위치"}
@@ -34,7 +34,7 @@ const Main = () => {
             }}
           />
           <Menu
-            menuIcon={<IcQuestion />}
+            menuIcon={<StIcQuestion />}
             title={"질문하기"}
             titleEng={"Question"}
             description={
@@ -47,7 +47,7 @@ const Main = () => {
             }}
           />
           <Menu
-            menuIcon={<IcSuggestion />}
+            menuIcon={<StIcSuggestion />}
             title={"의견 제안"}
             titleEng={"Suggestion"}
             description={
@@ -80,4 +80,25 @@ const StMenuWrapper = styled.div`
 
   width: 100%;
   margin-top: 4.6rem;
+`;
+
+const StIcContact = styled(IcContact)`
+  width: 100%;
+  height: auto;
+  max-width: 11rem;
+  max-height: 11rem;
+`;
+
+const StIcQuestion = styled(IcQuestion)`
+  width: 100%;
+  height: auto;
+  max-width: 11rem;
+  max-height: 11rem;
+`;
+
+const StIcSuggestion = styled(IcSuggestion)`
+  width: 100%;
+  height: auto;
+  max-width: 11rem;
+  max-height: 11rem;
 `;

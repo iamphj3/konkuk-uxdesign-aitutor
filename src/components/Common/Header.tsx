@@ -19,7 +19,7 @@ const Header = ({ headerName, headerDescription }: HeaderProps) => {
           navigate("/");
         }}
       >
-        <IcLogo />
+        <StIcLogo />
       </StLogo>
       <h1>{headerName}</h1>
       {headerDescription}
@@ -62,4 +62,11 @@ const StLogo = styled.button`
   & > svg {
     float: left;
   }
+`;
+
+const StIcLogo = styled(IcLogo)`
+  width: 100%;
+  height: auto;
+  max-width: 16.1rem;
+  max-height: 52.33rem;
 `;

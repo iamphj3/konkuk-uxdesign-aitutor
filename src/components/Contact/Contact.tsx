@@ -9,7 +9,7 @@ const Contact = () => {
     <BaseLayout headerName="교수님 연락처">
       <StContact>
         <StNameCard>
-          <IcPerson />
+          <StIcPerson />
           <h2>김지인 교수</h2>
           <p>
             Professor Jee-in Kim
@@ -20,17 +20,17 @@ const Contact = () => {
         </StNameCard>
         <StContactInfoWrapper>
           <ContactInfo
-            icon={<IcOffice />}
+            icon={<StIcOffice />}
             title="Office"
             information="공학관 384-2호"
           />
           <ContactInfo
-            icon={<IcMail />}
-            title="E-mail"
+            icon={<StIcMail />}
+            title="Mail"
             information="jnkm@konkuk.ac.kr"
           />
           <ContactInfo
-            icon={<IcPhone />}
+            icon={<StIcPhone />}
             title="Phone"
             information="010-2010-3540"
           />
@@ -111,4 +111,32 @@ const StContactInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+`;
+
+const StIcPerson = styled(IcPerson)`
+  width: 100%;
+  height: auto;
+  max-width: 8.4rem;
+  max-height: 8.4rem;
+`;
+
+const StIcOffice = styled(IcOffice)`
+  width: 100%;
+  height: auto;
+  max-width: 7rem;
+  max-height: 7rem;
+`;
+
+const StIcMail = styled(IcMail)`
+  width: 100%;
+  height: auto;
+  max-width: 7rem;
+  max-height: 7rem;
+`;
+
+const StIcPhone = styled(IcPhone)`
+  width: 100%;
+  height: auto;
+  max-width: 7rem;
+  max-height: 7rem;
 `;
