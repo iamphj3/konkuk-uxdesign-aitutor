@@ -11,7 +11,7 @@ import IcOffice from './ic_office.svg?react';
 import IcPerson from './ic_person.svg?react';
 import IcPhone from './ic_phone.svg?react';
 import IcQuestion from './ic_question.svg?react';
-import IcSuggestion from './ic_suggestion.svg';
+import IcSuggestion from './ic_suggestion.svg?react';
 
 export {
   IcLeft,

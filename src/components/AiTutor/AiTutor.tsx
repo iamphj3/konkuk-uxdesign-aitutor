@@ -11,6 +11,13 @@ const AiTutor = () => {
     setExpanded(!expanded);
   };
 
+  const openFullScreen = () => {
+    window.open(
+      "https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM",
+      "_blank"
+    );
+  };
+
   return (
     <BaseLayout
       headerName="AI Tutor"
@@ -24,15 +31,19 @@ const AiTutor = () => {
       }
     >
       <StAiTutor $expanded={expanded}>
-        <StCheckboxLabel>
-          {expanded ? <StIcCheckAfter /> : <StIcCheckBefore />}
-          채팅창 길이 늘리기
-          <StCheckbox
-            type="checkbox"
-            checked={expanded}
-            onChange={toggleHeight}
-          />
-        </StCheckboxLabel>
+        <StSettings>
+          <StCheckboxLabel>
+            {expanded ? <StIcCheckAfter /> : <StIcCheckBefore />}
+            채팅창 길이 늘리기
+            <StCheckbox
+              type="checkbox"
+              checked={expanded}
+              onChange={toggleHeight}
+            />
+          </StCheckboxLabel>
+          <StFullScreenLink onClick={openFullScreen}>전체화면</StFullScreenLink>
+        </StSettings>
+
         <iframe src="https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM" />
       </StAiTutor>
     </BaseLayout>
@@ -79,18 +90,44 @@ const StCheckbox = styled.input`
   display: none;
 `;
 
+const StFullScreenLink = styled.button`
+  height: 3.6rem;
+  margin-bottom: 1.7rem;
+  padding: 0.5rem 1rem 0.3rem 1rem;
+
+  border-radius: 0.5rem;
+  background-color: #5236ff;
+  color: #fff;
+
+  font-family: Open Sans;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 3rem */
+  cursor: pointer;
+`;
+
 const StAiTutor = styled.div<{ $expanded: boolean }>`
-  & > ${StCheckboxLabel} {
-    cursor: pointer;
-  }
   & > iframe {
     width: 100%;
     height: 100%;
-    /* min-height: 68rem; */
     min-height: ${({ $expanded }) => ($expanded ? "136rem" : "68rem")};
+
+    margin-bottom: 15rem;
 
     @media (max-width: 768px) {
       height: 350rem;
     }
+  }
+`;
+
+const StSettings = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+
+  & > ${StCheckboxLabel} {
+    cursor: pointer;
   }
 `;
