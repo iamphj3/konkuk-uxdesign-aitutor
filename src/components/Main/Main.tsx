@@ -13,9 +13,10 @@ const Main = () => {
       headerName={"UX Design AI Tutor"}
       headerDescription={
         <p>
-          건국대학교 UX디자인 수업 AI 튜터 (김지인 교수) AI Tutor for UX Design
+          건국대학교 UX디자인 수업 AI 튜터 (김지인 교수)
           <br />
-          Class at Konkuk University (Professor Jee-in Kim)
+          AI Tutor for UX Design Class at Konkuk University (Professor Jee-in
+          Kim)
         </p>
       }
     >
