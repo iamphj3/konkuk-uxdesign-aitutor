@@ -71,10 +71,10 @@ Error generating stack: `+i.message+`
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 
   & > h1 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     color: #242331;
     text-align: center;
@@ -89,7 +89,7 @@ Error generating stack: `+i.message+`
     color: #797979;
     text-align: center;
     font-family: Nunito;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 157.4%; /* 3.4628rem */
@@ -106,7 +106,7 @@ Error generating stack: `+i.message+`
 `;function Br({headerName:e,headerDescription:t,children:n}){return E.jsxs(hm,{children:[E.jsx(cm,{headerName:e,headerDescription:t}),E.jsx(mm,{children:n})]})}const hm=$.main`
   height: 100dvh;
 
-  padding: 5.6rem 26rem 0 26rem;
+  padding: 2.6rem 26rem 0 26rem;
   background: linear-gradient(
     180deg,
     #e0dbff 0%,
@@ -118,7 +118,11 @@ Error generating stack: `+i.message+`
   & > iframe {
     width: 100%;
     height: 100%;
-    min-height: 70rem;
+    min-height: 68rem;
+
+    @media (max-width: 768px) {
+      height: 350rem;
+    }
   }
 `,ym=()=>E.jsx(gm,{}),ro=({icon:e,title:t,information:n})=>E.jsxs(wm,{children:[E.jsxs(xm,{children:[e,E.jsx("h3",{children:t})]}),E.jsx("p",{children:n})]}),wm=$.div`
   display: flex;

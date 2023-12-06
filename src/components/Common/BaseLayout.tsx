@@ -26,7 +26,7 @@ export default BaseLayout;
 const StBaseLayout = styled.main`
   height: 100dvh;
 
-  padding: 5.6rem 26rem 0 26rem;
+  padding: 2.6rem 26rem 0 26rem;
   background: linear-gradient(
     180deg,
     #e0dbff 0%,

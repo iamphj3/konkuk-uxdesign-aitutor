@@ -28,7 +28,7 @@ const StAiTutor = styled.div`
   & > iframe {
     width: 100%;
     height: 100%;
-    min-height: 70rem;
+    min-height: 68rem;
 
     @media (max-width: 768px) {
       height: 350rem;

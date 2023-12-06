@@ -33,10 +33,10 @@ const StHeaderWrapper = styled.header`
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
 
   & > h1 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
     color: #242331;
     text-align: center;
@@ -51,7 +51,7 @@ const StHeaderWrapper = styled.header`
     color: #797979;
     text-align: center;
     font-family: Nunito;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 157.4%; /* 3.4628rem */
