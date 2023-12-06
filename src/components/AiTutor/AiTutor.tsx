@@ -79,7 +79,7 @@ const StCheckboxLabel = styled.label`
   float: right;
 
   color: #242331;
-  font-family: Open Sans;
+  font-family: Nunito;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -100,7 +100,7 @@ const StFullScreen = styled.button`
   background-color: #5236ff;
   color: #fff;
 
-  font-family: Open Sans;
+  font-family: Nunito;
   font-size: 2rem;
   font-style: normal;
   font-weight: 600;
