@@ -1,6 +1,6 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
-import BaseLayout from "../Common/BaseLayout";
+import BaseLayout from '../Common/BaseLayout';
 
 const Suggestion = () => {
   return (
@@ -29,7 +29,7 @@ export default Suggestion;
 const StSuggestion = styled.div`
   & > iframe {
     width: 100%;
-    height: 100rem;
+    height: 120rem;
 
     @media (max-width: 768px) {
       height: 550rem;
