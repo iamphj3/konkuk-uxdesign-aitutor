@@ -41,7 +41,9 @@ const AiTutor = () => {
               onChange={toggleHeight}
             />
           </StCheckboxLabel>
-          <StFullScreenLink onClick={openFullScreen}>전체화면</StFullScreenLink>
+          <StFullScreen type="button" onClick={openFullScreen}>
+            전체화면
+          </StFullScreen>
         </StSettings>
 
         <iframe src="https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM" />
@@ -90,7 +92,7 @@ const StCheckbox = styled.input`
   display: none;
 `;
 
-const StFullScreenLink = styled.button`
+const StFullScreen = styled.button`
   height: 3.6rem;
   margin-bottom: 1.7rem;
   padding: 0.5rem 1rem 0.3rem 1rem;
