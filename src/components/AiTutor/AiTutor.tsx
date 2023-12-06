@@ -45,8 +45,7 @@ const AiTutor = () => {
             전체화면
           </StFullScreen>
         </StSettings>
-
-        <iframe src="https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM" />
+        <iframe src="https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM"></iframe>
       </StAiTutor>
     </BaseLayout>
   );
