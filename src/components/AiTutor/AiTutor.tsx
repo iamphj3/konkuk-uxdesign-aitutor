@@ -31,20 +31,26 @@ const AiTutor = () => {
       }
     >
       <StAiTutor $expanded={expanded}>
-        <StSettings>
-          <StCheckboxLabel>
-            {expanded ? <StIcCheckAfter /> : <StIcCheckBefore />}
-            채팅창 길이 늘리기
-            <StCheckbox
-              type="checkbox"
-              checked={expanded}
-              onChange={toggleHeight}
-            />
-          </StCheckboxLabel>
-          <StFullScreen type="button" onClick={openFullScreen}>
-            전체화면
-          </StFullScreen>
-        </StSettings>
+        <StSettingWrapper>
+          <StAlert>
+            ⚠️ 한글 일부가 깨지는 문제 해결을 위해 현재 조치 중이며, 신속히
+            해결하도록 하겠습니다.
+          </StAlert>
+          <StSettings>
+            <StCheckboxLabel>
+              {expanded ? <StIcCheckAfter /> : <StIcCheckBefore />}
+              채팅창 길이 늘리기
+              <StCheckbox
+                type="checkbox"
+                checked={expanded}
+                onChange={toggleHeight}
+              />
+            </StCheckboxLabel>
+            <StFullScreen type="button" onClick={openFullScreen}>
+              전체화면
+            </StFullScreen>
+          </StSettings>
+        </StSettingWrapper>
         <iframe src="https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM"></iframe>
       </StAiTutor>
     </BaseLayout>
@@ -75,7 +81,6 @@ const StCheckboxLabel = styled.label`
 
   height: 2.3rem;
   max-height: 2.3rem;
-  margin-bottom: 1.7rem;
   float: right;
 
   color: #242331;
@@ -91,9 +96,27 @@ const StCheckbox = styled.input`
   display: none;
 `;
 
+const StAlert = styled.div`
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 0.5rem;
+  background: #fff;
+
+  color: #797979;
+  font-family: Nunito;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 3rem */
+  text-transform: capitalize;
+`;
+
 const StFullScreen = styled.button`
   height: 3.6rem;
-  margin-bottom: 1.7rem;
   padding: 0.5rem 1rem 0.3rem 1rem;
 
   border-radius: 0.5rem;
@@ -120,6 +143,14 @@ const StAiTutor = styled.div<{ $expanded: boolean }>`
       height: 350rem;
     }
   }
+`;
+
+const StSettingWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.7rem;
 `;
 
 const StSettings = styled.div`

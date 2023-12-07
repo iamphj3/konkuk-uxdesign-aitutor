@@ -114,7 +114,7 @@ Error generating stack: `+i.message+`
   );
 `,ym=j.div`
   width: 100%;
-`,wm=()=>{const[e,t]=h.useState(!1),n=()=>{t(!e)},r=()=>{window.open("https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM","_blank")};return S.jsx(Br,{headerName:"AI Tutor",headerDescription:S.jsxs("p",{children:["UX Design 개념에 대해 궁금한 점이 있으면 AI Tutor에게 질문해주세요.",S.jsx("br",{}),"수강관리 등 행정적인 문의사항은 김지인 교수님께 직접 문의하시는 것이 정확합니다."]}),children:S.jsxs(Em,{$expanded:e,children:[S.jsxs(_m,{children:[S.jsxs(jd,{children:[e?S.jsx(xm,{}):S.jsx(Sm,{}),"채팅창 길이 늘리기",S.jsx(Cm,{type:"checkbox",checked:e,onChange:n})]}),S.jsx(km,{onClick:r,children:"전체화면"})]}),S.jsx("iframe",{src:"https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM"})]})})},xm=j(rm)`
+`,wm=()=>{const[e,t]=h.useState(!1),n=()=>{t(!e)},r=()=>{window.open("https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM","_blank")};return S.jsx(Br,{headerName:"AI Tutor",headerDescription:S.jsxs("p",{children:["UX Design 개념에 대해 궁금한 점이 있으면 AI Tutor에게 질문해주세요.",S.jsx("br",{}),"수강관리 등 행정적인 문의사항은 김지인 교수님께 직접 문의하시는 것이 정확합니다."]}),children:S.jsxs(Em,{$expanded:e,children:[S.jsxs(_m,{children:[S.jsxs(jd,{children:[e?S.jsx(xm,{}):S.jsx(Sm,{}),"채팅창 길이 늘리기",S.jsx(Cm,{type:"checkbox",checked:e,onChange:n})]}),S.jsx(km,{type:"button",onClick:r,children:"전체화면"})]}),S.jsx("iframe",{src:"https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM"})]})})},xm=j(rm)`
   width: 100%;
   height: auto;
   max-width: 2.3rem;
@@ -136,7 +136,7 @@ Error generating stack: `+i.message+`
   float: right;
 
   color: #242331;
-  font-family: Open Sans;
+  font-family: Nunito;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -153,7 +153,7 @@ Error generating stack: `+i.message+`
   background-color: #5236ff;
   color: #fff;
 
-  font-family: Open Sans;
+  font-family: Nunito;
   font-size: 2rem;
   font-style: normal;
   font-weight: 600;
@@ -453,7 +453,7 @@ Error generating stack: `+i.message+`
 `,lg=()=>S.jsx(ng,{}),ig=()=>S.jsx(Br,{headerName:"제안하기",headerDescription:S.jsxs("p",{children:["AI 튜터를 사용하시다가 발생한 문제나 제안할 의견이 있으시면 알려주세요.",S.jsx("br",{}),"서비스를 지속적으로 개선하는 데 큰 도움이 됩니다."]}),children:S.jsx(og,{children:S.jsx("iframe",{src:"https://docs.google.com/forms/d/e/1FAIpQLSdT2yDOmf4VL-cRQAe1Jv8QEDqBrXZpavD5nvxoBuF3ohQmRw/viewform?embedded=true",children:"로드 중…"})})}),og=j.div`
   & > iframe {
     width: 100%;
-    height: 100rem;
+    height: 120rem;
 
     @media (max-width: 768px) {
       height: 550rem;
