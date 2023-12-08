@@ -24,12 +24,23 @@
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
   <script>
-    window.embeddedChatbotConfig = {
-      chatbotId: "3t6nItqHc-BZCQGWHrypM",
-      domain: "www.chatbase.co"
-    }
-  </script>
-  <script src="https://www.chatbase.co/embed.min.js" chatbotId="3t6nItqHc-BZCQGWHrypM" domain="www.chatbase.co" defer>
+    (function (w, d, s, o, f, js, fjs) {
+      w["botsonic_widget"] = o;
+      w[o] =
+        w[o] ||
+        function () {
+          (w[o].q = w[o].q || []).push(arguments);
+        };
+      (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+      js.id = o;
+      js.src = f;
+      js.async = 1;
+      fjs.parentNode.insertBefore(js, fjs);
+    })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+    Botsonic("init", {
+      serviceBaseUrl: "https://api.botsonic.ai",
+      token: "ec70c562-add2-43b1-a4ee-80071dd5e1cb",
+    });
   </script>
 </body>
 

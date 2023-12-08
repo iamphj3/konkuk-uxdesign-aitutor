@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { styled } from 'styled-components';
+import { useState } from "react";
+import { styled } from "styled-components";
 
-import { IcCheckAfter, IcCheckBefore } from '../../assets/icons';
-import BaseLayout from '../Common/BaseLayout';
+import { IcCheckAfter, IcCheckBefore } from "../../assets/icons";
+import BaseLayout from "../Common/BaseLayout";
 
 const AiTutor = () => {
   const [expanded, setExpanded] = useState(false);
@@ -11,12 +11,12 @@ const AiTutor = () => {
     setExpanded(!expanded);
   };
 
-  const openFullScreen = () => {
-    window.open(
-      "https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM",
-      "_blank"
-    );
-  };
+  // const openFullScreen = () => {
+  //   window.open(
+  //     "https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM",
+  //     "_blank"
+  //   );
+  // };
 
   return (
     <BaseLayout
@@ -31,27 +31,21 @@ const AiTutor = () => {
       }
     >
       <StAiTutor $expanded={expanded}>
-        <StSettingWrapper>
-          <StAlert>
-            ⚠️ 한글 일부가 깨지는 문제 해결을 위해 현재 조치 중이며, 신속히
-            해결하도록 하겠습니다.
-          </StAlert>
-          <StSettings>
-            <StCheckboxLabel>
-              {expanded ? <StIcCheckAfter /> : <StIcCheckBefore />}
-              채팅창 길이 늘리기
-              <StCheckbox
-                type="checkbox"
-                checked={expanded}
-                onChange={toggleHeight}
-              />
-            </StCheckboxLabel>
-            <StFullScreen type="button" onClick={openFullScreen}>
-              전체화면
-            </StFullScreen>
-          </StSettings>
-        </StSettingWrapper>
-        <iframe src="https://www.chatbase.co/chatbot-iframe/3t6nItqHc-BZCQGWHrypM"></iframe>
+        <StSettings>
+          <StCheckboxLabel>
+            {expanded ? <StIcCheckAfter /> : <StIcCheckBefore />}
+            채팅창 길이 늘리기
+            <StCheckbox
+              type="checkbox"
+              checked={expanded}
+              onChange={toggleHeight}
+            />
+          </StCheckboxLabel>
+          {/* <StFullScreen type="button" onClick={openFullScreen}>
+            전체화면
+          </StFullScreen> */}
+        </StSettings>
+        <iframe src="https://widget.writesonic.com/CDN/index.html?service-base-url=https://api.botsonic.ai&token=ec70c562-add2-43b1-a4ee-80071dd5e1cb&base-origin=https://www.uxdesign-aitutor.site&instance-name=Botsonic&standalone=true&page-url=https://www.uxdesign-aitutor.site/126fd608-b1ba-4520-85b9-e4c07727746b?t=share&workspace_id=cd9266e0-cce7-440d-9df0-c89a47da1f1e"></iframe>
       </StAiTutor>
     </BaseLayout>
   );
@@ -76,12 +70,11 @@ const StIcCheckBefore = styled(IcCheckBefore)`
 const StCheckboxLabel = styled.label`
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 1rem;
 
   height: 2.3rem;
   max-height: 2.3rem;
-  float: right;
 
   color: #242331;
   font-family: Nunito;
@@ -104,7 +97,7 @@ const StAlert = styled.div`
   gap: 1rem;
 
   border-radius: 0.5rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
 
   color: #797979;
   font-family: Nunito;
@@ -134,10 +127,10 @@ const StFullScreen = styled.button`
 const StAiTutor = styled.div<{ $expanded: boolean }>`
   & > iframe {
     width: 100%;
-    height: 100%;
-    min-height: ${({ $expanded }) => ($expanded ? "136rem" : "68rem")};
+    min-height: ${({ $expanded }) => ($expanded ? "130rem" : "68rem")};
 
-    margin-bottom: 15rem;
+    padding: 0;
+    margin-bottom: 10rem;
 
     @media (max-width: 768px) {
       height: 350rem;
@@ -145,17 +138,9 @@ const StAiTutor = styled.div<{ $expanded: boolean }>`
   }
 `;
 
-const StSettingWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 1.7rem;
-`;
-
 const StSettings = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 
